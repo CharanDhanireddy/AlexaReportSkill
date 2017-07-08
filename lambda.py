@@ -73,16 +73,18 @@ def get_welcome_response():
         card_title, speech_output, reprompt_text, should_end_session))
 
 def any_status(intent,session):
-    
-    req = urllib2.Request("http://sic.wiprosupport.com/api/SO/TI")
+    # Here the URLs cannot be given to public use, but any URL in JSON format should
+    # work given that proper changes are made in the subsequent code
+	
+    req = urllib2.Request("URL1")
     resp = urllib2.urlopen(req)
     datati = json.loads(resp.read())
     
-    req = urllib2.Request("http://sic.wiprosupport.com/api/SO/SMC")
+    req = urllib2.Request("URL2")
     resp = urllib2.urlopen(req)
     datasmc = json.loads(resp.read())
     
-    req = urllib2.Request("http://sic.wiprosupport.com/api/SO/SM")
+    req = urllib2.Request("URL3")
     resp = urllib2.urlopen(req)
     datasm = json.loads(resp.read())
     
@@ -153,15 +155,15 @@ def any_status(intent,session):
 def Report_status(intent, session):
 
     
-    req = urllib2.Request("http://sic.wiprosupport.com/api/SO/TI")
+    req = urllib2.Request("URL1")
     resp = urllib2.urlopen(req)
     datati = json.loads(resp.read())
     
-    req = urllib2.Request("http://sic.wiprosupport.com/api/SO/SMC")
+    req = urllib2.Request("URL2")
     resp = urllib2.urlopen(req)
     datasmc = json.loads(resp.read())
     
-    req = urllib2.Request("http://sic.wiprosupport.com/api/SO/SM")
+    req = urllib2.Request("URL3")
     resp = urllib2.urlopen(req)
     datasm = json.loads(resp.read())
     
@@ -203,17 +205,9 @@ def Report_status(intent, session):
     elif re == "threat intelligence":
         speech_output = "Threat Intelligence report is as following. total number of reported vulnerabilities are %s. Out of %s, %s are critical, %s are high, %s are medium Vulnerabilities. Most affected vendors are %s, %s and %s .Top Malware By Reported Indicators are %s, %s and %s" %(tot_vul, tot_vul, crit_vul, hi_vul, med_vul, aff_vendor1, aff_vendor2, aff_vendor3, top_mal1, top_mal2, top_mal3)
     
-    
-	
-	
-	
-    
         
     return build_response({}, build_speechlet_response(
         "I am saying something", speech_output, "", False))
-        
-
-
 
 
 # --------------- Helpers that build all of the responses ----------------------
