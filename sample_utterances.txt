@@ -1,0 +1,24 @@
+AMAZON.HelpIntent hi
+AMAZON.HelpIntent hello
+AMAZON.HelpIntent report
+AMAZON.HelpIntent how
+AMAZON.HelpIntent whatsup
+AMAZON.HelpIntent overview
+AMAZON.StopIntent Stop it
+AMAZON.StopIntent Thank you
+AMAZON.StopIntent Stop
+AnyIntent tell me the number of {data}
+AnyIntent tell me the number of {data} vulnerabilities
+AnyIntent tell me the names of most affected {data}
+AnyIntent tell me the names of top {data}
+AnyIntent What is the percentage of {data}
+AnyIntent number of {data}
+AnyIntent give the {data} report
+AnyIntent give me the {data} overview
+AnyIntent give me the {data}
+AnyIntent tell me about {data}
+AnyIntent tell me the {data} overview
+ReportIntent tell me about {portal}
+ReportIntent tell me about {portal} report
+ReportIntent give me  {portal} report
+ReportIntent tell me {portal} overview

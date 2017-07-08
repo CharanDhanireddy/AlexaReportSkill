@@ -1,0 +1,23 @@
+data_type
+
+vulnerabilities
+critical
+high
+medium
+vendors
+malwares
+average events
+total events
+events contributing to alerts
+alerts
+true positive alerts
+high priority incidents
+operational risk
+operational reliability
+operational efficiency
+
+portal_type
+
+security monitoring
+security management
+threat intelligence
